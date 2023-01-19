@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Edit
+{% endblock %}
+
+{% block main %}
+    <form action="/edit" method="post">
+        <div class="mb-3">
+           <select name="product" autofocus class="form-select mx-auto w-auto" style="min-width:20%">
+            {% for product in products %}
+            <option value = "{{ product.id }}">{{product.id}}.{{ product.name }}</option>
+            {% endfor %}
+           </select>
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="quantity" placeholder="quantity" type="number">
+        </div>
+        <button class="btn btn-primary" type="submit">Update</button>
+    </form>
+{% endblock %}

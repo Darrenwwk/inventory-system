@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>Mamak Restaurant</title>
+    </head>
+
+    <script>
+      function greet(){
+        let input_value = document.querySelector("#exampleFormControlTextarea1").value;
+        let input_value1 = document.querySelector("#exampleFormControlInput1").value;
+
+        if (input_value.length && input_value1.length > 0){
+          alert("Sent Successful!  " + input_value1);
+        }
+        else {
+          alert("Fill in the details");
+        }
+      }
+
+      function blink(){
+          let x = document.querySelector("#pa");
+
+          if (x.style.visibility === 'hidden'){
+            x.style.visibility = 'visible';
+          }
+          else {
+            x.style.visibility = 'hidden';
+          }
+        }
+        window.setInterval(blink,500);
+  </script>
+
+    <body>
+        <h1 id="mamak">Contact Us</h1>
+        <br>
+            <ul class="nav nav-pills nav-fill">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Home Page</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="firstpage.html">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="reservation.html">Reservation</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact-us.html">Contact Us</a>
+            </li>
+          </ul>
+
+          <div>
+            <form onsubmit="greet(); return false;">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Your Email Address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+              </div>
+
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Your Message</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <input type="submit">
+              </div>
+            </form>
+
+            <p id="pa">OPERATING HOURS
+              <br>
+              Lunch: 11.30am - 3:00pm
+              High Tea: 3.30pm - 5:30pm
+              Dinner: 6:00pm - 11:00pm
+              <br>
+              <br>
+              Open daily for lunch and dinner
+              High tea is available from Fri to Sun</p>
+          </div>
+
+
+          <div style="width: 100%; text-align:right;"><iframe width="35%" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+            src="https://maps.google.com/maps?width=100%25&amp;height=500&amp;hl=en&amp;q=putian%20sunway%20velocity+(Mamak)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+            <a href="https://www.maps.ie/distance-area-calculator.html">measure area map</a></iframe></div>
+
+        </body>
+      </html>

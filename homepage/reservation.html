@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>Mamak Restaurant</title>
+    </head>
+    <script>
+        function greet(){
+        let input_value = document.querySelector("#name").value;
+
+        if (input_value.length > 0){
+          alert("Your reservation has been made!  " + input_value); //if found input value then alert msg
+        }
+        else {
+          alert("Fill in the details");
+        }
+      }
+    </script>
+    <body>
+        <h1 id="mamak">Reservation</h1>
+        <br>
+            <ul class="nav nav-pills nav-fill">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Home Page</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="firstpage.html">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="reservation.html">Reservation</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact-us.html">Contact Us</a>
+            </li>
+          </ul>
+
+          <div style="color:white; text-align:center">
+            <h2>Welcome To Mamak</h2>
+    <p>Please input your details to make a reservation.</p>
+            </div>
+
+                <form onsubmit="greet(); return false;"> <!--once submit button is clicked then execute greet function-->
+                    <div class="mb-3">
+                      <label for="name" class="form-label" style="position:absolute;top:235px;left:440px">Your Name</label>
+                      <input type="text" class="form-control" style="position:absolute; left:550px" id="name" placeholder="John Doe" pattern=[A-Z\sa-z]{3,20} required>
+                    </div>
+                    <br>
+                    <br>
+
+                    <div class="mb-3">
+                      <label for="email" class="form-label" style="position:absolute;top:280px;left:440px">Your E-mail</label>
+                      <input type="email" id="email" class="form-control" style="position:absolute; left:550px" placeholder="john.doe@email.com" required>
+                    </div>
+                    <br>
+                    <br>
+
+                    <div class="mb-3">
+                      <label for="phone" class="form-label" style="position:absolute;top:345px;left:440px">Your Phone</label>
+                      <input type="tel" id="phone" class="form-control" style="position:absolute; left:550px" required>
+                    </div>
+                    <hr>
+                    <br>
+
+                    <div class="mb-3">
+                      <label for="adult" class="form-label" style="position:absolute;top:400px;left:440px" >Adults</label>
+                      <input type="number" class="form-control" style="position:absolute; left:550px" id="adult" placeholder="2" min="1" required>
+                    </div>
+                    <br>
+                    <br>
+
+                    <div class="mb-3">
+                      <label for="child" class="form-label" style="position:absolute;top:460px;left:440px">Children</label>
+                      <input type="number" id="child" class="form-control" style="position:absolute; left:550px" placeholder="1" min="0" required>
+                    </div>
+                    <br>
+                    <br>
+
+                    <div class="mb-3">
+                      <label for="date" class="form-label" style="position:absolute;top:530px;left:440px">Date</label>
+                      <input type="date" class="form-control" style="position:absolute; left:550px" id="date" required>
+                    </div>
+                    <hr>
+                    <br>
+
+                    <div>
+                      <label for="message" class="form-label" style="position:absolute;top:580px;left:430px">Anything Else?</label>
+                      <textarea class="form-control" style="position:absolute; left:550px" placeholder="Tell us anything"></textarea>
+                    </div>
+
+                    <button type="submit" style="position:absolute;top:680px;left:700px">Book The Rooms</button>
+
+                  </form>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+                  <table class="table table-bordered border-primary" style="background-color:black; text-align:center">
+
+                        <caption style="color:red">We will only reserve your table for 10min</caption>
+                        <tr style="color:white">
+                          <th >Operation hour</th>
+                          <th>Rest day</th>
+                          <th>Minimum spend of reservation table</th>
+                        </tr>
+                        <tr style="color:white;" >
+                          <td style="width:33%">10a.m. - 12a.m.</td>
+                          <td style="width:33%">Every Monday</td>
+                          <td style="width:33%">RM200</td>
+                        </tr>
+
+                  </table>
+
+    </body>
+    </html>

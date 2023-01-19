@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Searched
+{% endblock %}
+
+{% block main %}
+{% for product in products %}
+    <h2>Product Name: {{product["name"]}}</h2>
+    <h2>Quantity: {{product["quantity"]}}</h2>
+    <h2>Lastest Updated Time: {{product["updated_at"]}}</h2>
+{% endfor %}
+{% endblock %}

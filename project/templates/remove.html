@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Remove
+{% endblock %}
+
+{% block main %}
+<form action="/remove" method="post">
+  <div class="mb-3">
+     <select name="product" autofocus class="form-select mx-auto w-auto" style="min-width:20%">
+      {% for product in products %}
+      <option value = "{{ product.id }}">{{product.id}}.{{ product.name }}</option>
+      {% endfor %}
+     </select>
+  </div>
+  <button class="btn btn-primary" type="submit">Delete</button>
+</form>
+{% endblock %}
